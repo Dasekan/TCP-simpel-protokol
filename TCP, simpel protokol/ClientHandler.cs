@@ -11,12 +11,12 @@ namespace TCP__simpel_protokol
     {
         public static void HandleClient(TcpClient socket)
         {
-            // Get the network stream to read/write data
+            
             NetworkStream stream = socket.GetStream();
             StreamReader reader = new StreamReader(stream);
             StreamWriter writer = new StreamWriter(stream);
 
-            while (true) // Keep handling client requests indefinitely
+            while (true) 
             {
                 string message = reader.ReadLine();
 
